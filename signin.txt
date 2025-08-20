@@ -1,0 +1,52 @@
+<?php include 'db_connect.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .btn input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<form method="POST">
+    <h3>Register here!</h3>
+    <label for="name">Enter Your Name..</label>
+    <input type="text" name="name" placeholder="Full Name" required><br>
+
+    <label for="email">Enter Your Email..</label>
+    <input type="email" name="email" placeholder="Email" required><br>
+
+    <label for="password">Enter Your Password..</label>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button type="submit" name="signup">Sign Up</button>
+
+    <p>Already have an account? <a href="login.php">Login</a></p>
+    
+</form>
+</body>
+</html>
+
+
+<?php
+if (isset($_POST['signup'])) {
+    $name = $conn->real_escape_string($_POST['name']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+    if ($conn->query($sql)) {
+        $_SESSION['user'] = $name; 
+        $_SESSION['just_signed_up'] = true; 
+        echo "<script>
+                alert('Signup successful!');
+                window.location.href = 'index.html';
+            </script>";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
+?>
+

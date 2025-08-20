@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(232, 200, 200, 0.5);
+        position: relative;
+    }
+
+    .back-card {
+        width: 500px;
+        height: 300px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+
+    }
+
+    
+
+    .page {
+        width: 450px;
+        height: 250px;
+        position: absolute;
+        /* top: 30px; */
+        padding: 20px;
+        overflow-y: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: ease-in-out 2s;
+    }
+
+   
+</style>
+
+<body>
+    <div class="back-card">
+    </div>
+    <div class="page">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolor cum voluptatibus reiciendis, ducimus,
+            maxime, dolores iusto adipisci repellendus asperiores aperiam molestias quas. Autem est incidunt architecto,
+            aut a laborum ullam rem doloribus, repellendus quibusdam temporibus illum ad quia repudiandae.</p>
+    </div>
+    <script>
+        const backCard = document.querySelector('.back-card');
+        const page = document.querySelector('.page');
+
+        // Move the page down when front card is clicked
+        backCard.addEventListener('mouseover', function () {
+            page.style.top = '30px';
+        });
+
+        backCard.addEventListener('mouseout', function () {
+            page.style.top = '30%';
+        });
+
+          </script>
+</body>
+
+</html>
