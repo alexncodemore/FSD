@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <input type="text" id="searchBar" placeholder="Search for products..." />
+    <button onclick="filterCards()">Search</button>
+
+    <div class="box">
+            <div class="product-card" data-keywords="fresh" style="display: none;">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs1.png" alt="Grocery Product" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Amul Pure Ghee (1L)</div>
+                    <div class="product-price">₹585.00</div>
+                    <p class="description">Rich aroma, granular texture, and trusted purity. Ideal for cooking and
+                        rituals.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-keywords="organic" style="display: none;">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs2.png" alt="Grocery Product" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Manual Press Chopper (500ml)</div>
+                    <div class="product-price">₹249.00</div>
+                    <p class="description">Quick chopping with this easy-to-use manual press chopper.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-keywords="tomatoes" style="display: none;">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs3.png" alt="Aashirwad Aata" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Aashirwad Aata (5kg)</div>
+                    <div class="product-price">₹320.00</div>
+                    <p class="description">Soft and nutritious whole wheat flour for everyday use. Easy to digest and
+                        soft dough.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+    <script>
+        function filterCards() {
+            const input = document.getElementById("searchBar").value.toLowerCase();
+            const cards = document.querySelectorAll(".product-card");
+
+            cards.forEach(card => {
+                const keywords = card.getAttribute("data-keywords").toLowerCase();
+                if (keywords.includes(input)) {
+                    card.style.display = "block"; // show matching card
+                } else {
+                    card.style.display = "none"; // hide non-matching card
+                }
+            });
+        }
+    </script>
+</body>
+
+
+
+</html>

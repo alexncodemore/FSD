@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - FreshMart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      width: 100%;
+    }
+
+    header {
+      width: 100%;
+      background-color: rgba(45, 106, 79, 0.9);
+      padding: 20px 40px;
+      color: #fff;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px;
+      vertical-align: middle;
+    }
+
+    .about-section {
+      width: 100%;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+    }
+
+    .sub-about-section {
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+    }
+
+    .about-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #2d6a4f;
+      text-align: center;
+    }
+
+    .about-section p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .about-highlights {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .highlight {
+      width: 300px;
+      background-color: #e9f5ef;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight h4 {
+      color: #1b4332;
+      margin-bottom: 10px;
+    }
+
+    .feedback-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      text-align: center;
+      background-color: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-section h2 {
+      font-size: 28px;
+      color: #2d6a4f;
+      margin-bottom: 30px;
+    }
+
+    .feedback-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .feedback-card {
+      background-color: #e9f5ef;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .feedback-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feedback-card p {
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .feedback-card h4 {
+      color: #1b4332;
+      font-weight: 500;
+    }
+
+    .home {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: rgba(45, 106, 79, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 1000;
+    }
+
+    .home img {
+      width: 40px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2d6a4f;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      header img {
+        width: 120px;
+      }
+
+      .sub-about-section {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      .about-section h2,
+      .feedback-section h2 {
+        font-size: 24px;
+      }
+
+      .about-section p,
+      .feedback-card p {
+        font-size: 15px;
+      }
+
+      .highlight {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      .feedback-card {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      .home {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      .about-section h2,
+      .feedback-section h2 {
+        font-size: 20px;
+      }
+
+      .feedback-card h4,
+      .highlight h4 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1><img src="logo.png" alt=""> - Your Daily Grocery Partner</h1>
+  </header>
+
+  <div class="about-section">
+    <div class="sub-about-section">
+      <h2>Know More About Us</h2>
+      <p>
+        At FreshMart, we are redefining the grocery shopping experience by bringing freshness, quality, and
+        convenience right to your doorstep.
+        Founded with a vision to simplify grocery shopping, we offer a wide range of handpicked fruits,
+        vegetables, daily essentials, and household items — all at competitive prices.
+      </p>
+      <p>
+        We work directly with farmers, trusted suppliers, and local vendors to ensure that every product we
+        deliver is fresh, sustainable, and fairly sourced.
+        Our user-friendly platform and fast delivery network empower busy individuals and families to shop
+        smarter and live healthier.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <h4>1. Farm-Fresh Quality</h4>
+          <p>We source directly from local farms to ensure every bite is full of freshness and flavor.</p>
+        </div>
+        <div class="highlight">
+          <h4>2. Fast & Flexible Delivery</h4>
+          <p>Get your groceries delivered the same day or schedule delivery as per your convenience.</p>
+        </div>
+        <div class="highlight">
+          <h4>3. Wide Selection</h4>
+          <p>From organic vegetables to daily dairy, snacks, grains, and more — we’ve got it all.</p>
+        </div>
+        <div class="highlight">
+          <h4>4. Customer First</h4>
+          <p>We believe in building trust through transparent service, easy returns, and prompt support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feedback-section">
+    <h2>What Our Customers Say</h2>
+    <div class="feedback-cards">
+      <div class="feedback-card">
+        <p>“FreshMart never disappoints! The fruits and vegetables are always fresh and delivered on time.”</p>
+        <h4>- Priya S., Mumbai</h4>
+      </div>
+      <div class="feedback-card">
+        <p>“Great selection and easy checkout. The quality is top-notch, especially the organic range.”</p>
+        <h4>- Ankit R., Pune</h4>
+      </div>
+      <div class="feedback-card">
+        <p>“I’ve been using FreshMart weekly. Saves me time, and everything is hygienically packed.”</p>
+        <h4>- Sneha M., Bengaluru</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="home">
+    <img src="home.png" alt="back to home" onclick="window.location.href='index.html'" />
+  </div>
+
+  <footer>
+    &copy; 2025 Grocery in Minute. All rights reserved.
+  </footer>
+  
+
+</body>
+
+</html>

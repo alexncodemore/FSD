@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <div class="top">
+            <p><a href="tel:+91-0000000000">+91-0000000000</a></p>
+            <p><a href="mailto:meow@gmail.com">meow@gmail.com</a></p>
+            <p><a href="know_more.html" style="text-decoration: underline;">learn more</a></p>
+        </div>
+        <marquee>
+            <h1>50% OFF ON 1st PURCHASE || FREE DILIVERY ABOVE 200/- || WISHING YOU ALL A VERY HAPPY INDEPENDENCE DAY
+            </h1>
+        </marquee>
+        <div class="bottom">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+                <!-- <h1>Grocery in minute</h1> -->
+            </div>
+            <div class="search">
+                <input type="text" id="searchBar" placeholder="Search for products here" class="search-bar">
+                <button class="btn" onclick="filterCards()">Search</button>
+            </div>
+            <div class="user-end">
+                <div class="user-links">
+                    <a href="#" class="ctn1">sign in</a>
+                    <a href="#" class="ctn2">log in</a>
+                </div>
+                <div class="icons">
+                    <a href="#" class="cart">
+                        <img src="cart.png" alt="cart">
+                        <div class="pop">0</div>
+                    </a>
+                    <a href="#" class="like"><img src="like.png" alt="like"></a>
+                </div>
+                <div class="user-profile">
+                    <img src="user.png" alt="user profile">
+                    <div class="profile-dropdown">
+                        <img src="user.png" alt="user profile">
+                        <a href="#">Profile</a>
+                        <a href="#">Orders</a>
+                        <a href="#">Wishlist</a>
+                        <a href="#">Settings</a>
+                        <a href="#" class="ctn1">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Fresh Produce</a></li>
+            <li><a href="bakerynbread.html">Bakery & Breads</a></li>
+            <li><a href="#">Dairy & Eggs</a></li>
+            <li><a href="#">Grains & Staples</a></li>
+            <li><a href="#">Spices</a></li>
+            <li><a href="#">Snackes</a></li>
+            <li><a href="#">Oils & Sauces</a></li>
+            <li><a href="#">Sweets & Chocolates</a></li>
+            <li><a href="#">Beverages</a></li>
+            <li><a href="#">Household Essentails</a></li>
+            <li><a href="#">Personal care</a></li>
+        </ul>
+    </nav>
+    <div class="responsive-nav">
+
+    </div>
+    <div class="responsive-search search">
+        <input type="text" placeholder="Search for products here" class="search-bar" style="width: 50%; padding: 10px;">
+        <button class="btn">Search</button>
+        <div class="user-links" style="width: 35%;">
+            <a href="#" class="btn"
+                style="padding: 3px 3px 3px 12px; background-color: white; border:2px solid rgb(63, 42, 165); color:  rgb(63, 42, 165);">sign
+                in</a>
+            <a href="#" class="btn"
+                style="padding: 3px 3px 3px 12px; background-color: white; border:2px solid rgb(63, 42, 165); color:  rgb(63, 42, 165);">log
+                in</a>
+        </div>
+    </div>
+
+    <div class="search-result">
+        <div class="product-card" data-keywords="one">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs1.png" alt="Grocery Product" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Amul Pure Ghee (1L)</div>
+                <div class="product-price">₹585.00</div>
+                <p class="description">Rich aroma, granular texture, and trusted purity. Ideal for cooking and
+                    rituals.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card" data-keywords="two">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs2.png" alt="Grocery Product" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Manual Press Chopper (500ml)</div>
+                <div class="product-price">₹249.00</div>
+                <p class="description">Quick chopping with this easy-to-use manual press chopper.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs3.png" alt="Aashirwad Aata" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Aashirwad Aata (5kg)</div>
+                <div class="product-price">₹320.00</div>
+                <p class="description">Soft and nutritious whole wheat flour for everyday use. Easy to digest and
+                    soft dough.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs4.png" alt="Dawat Rice" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Dawat Basmati Rice (5kg)</div>
+                <div class="product-price">₹585.00</div>
+                <p class="description">Long-grain basmati rice, Taste of pure of basmati & ideal for biryani and
+                    pulao. </p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs5.png" alt="Milky Mist Probiotic Curd" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Milky Mist Probiotic Curd (200g)</div>
+                <div class="product-price">₹35.00</div>
+                <p class="description">Healthy curd with live cultures to support digestion.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs6.png" alt="Kasata Ice Cream" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Kasata Ice Cream (90ml)</div>
+                <div class="product-price">₹45.00</div>
+                <p class="description">Layered ice cream treat with nuts, jelly, and cake. Pure taste of Kasata
+                    desret.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs7.png" alt="Society Tea" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Society Premium Tea (1kg)</div>
+                <div class="product-price">₹270.00</div>
+                <p class="description">Rich, strong blend for a refreshing cup every time.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-keywords="three">
+            <div class="best-seller-badge">Best Seller</div>
+            <img src="bs8.png" alt="Matcha Tea" class="product-image">
+            <div class="product-details">
+                <div class="product-name">Japanese Matcha Tea (100g)</div>
+                <div class="product-price">₹890.00</div>
+                <p class="description">Antioxidant-rich green tea powder for health & focus.</p>
+                <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="home-image-slider">
+        <div class="slider-wrapper">
+            <div class="img-slider">
+                <img class="slide" id="slide1" src="s1.png"> <!-- change to image-->
+                <img class="slide" id="slide2" src="s2.png">
+                <img class="slide" id="slide3" src="s3.png">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide1"></a>
+                <a href="#slide2"></a>
+                <a href="#slide3"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <hr>
+
+
+    <div class="best-seller" id="best-seller">
+        <div class="box">
+            <div class="product-card" data-keywords="fresh">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs1.png" alt="Grocery Product" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Amul Pure Ghee (1L)</div>
+                    <div class="product-price">₹585.00</div>
+                    <p class="description">Rich aroma, granular texture, and trusted purity. Ideal for cooking and
+                        rituals.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-keywords="organic">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs2.png" alt="Grocery Product" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Manual Press Chopper (500ml)</div>
+                    <div class="product-price">₹249.00</div>
+                    <p class="description">Quick chopping with this easy-to-use manual press chopper.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card" data-keywords="tomatoes">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs3.png" alt="Aashirwad Aata" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Aashirwad Aata (5kg)</div>
+                    <div class="product-price">₹320.00</div>
+                    <p class="description">Soft and nutritious whole wheat flour for everyday use. Easy to digest and
+                        soft dough.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs4.png" alt="Dawat Rice" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Dawat Basmati Rice (5kg)</div>
+                    <div class="product-price">₹585.00</div>
+                    <p class="description">Long-grain basmati rice, Taste of pure of basmati & ideal for biryani and
+                        pulao. </p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs5.png" alt="Milky Mist Probiotic Curd" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Milky Mist Probiotic Curd (200g)</div>
+                    <div class="product-price">₹35.00</div>
+                    <p class="description">Healthy curd with live cultures to support digestion.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs6.png" alt="Kasata Ice Cream" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Kasata Ice Cream (90ml)</div>
+                    <div class="product-price">₹45.00</div>
+                    <p class="description">Layered ice cream treat with nuts, jelly, and cake. Pure taste of Kasata
+                        desret.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs7.png" alt="Society Tea" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Society Premium Tea (1kg)</div>
+                    <div class="product-price">₹270.00</div>
+                    <p class="description">Rich, strong blend for a refreshing cup every time.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="bs8.png" alt="Matcha Tea" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">Japanese Matcha Tea (100g)</div>
+                    <div class="product-price">₹890.00</div>
+                    <p class="description">Antioxidant-rich green tea powder for health & focus.</p>
+                    <div class="stars">⭐ ⭐ ⭐ ⭐ ☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="shopping-categories">
+        <h1>Explore the Category</h1>
+        <div class="line"></div>
+        <div class="slider">
+            <div class="category">
+                <img src="c1.png" alt="Category 1">
+                <div class="content-box">
+                    <h3>Grains and Pulses</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c2.png" alt="Category 2">
+                <div class="content-box">
+                    <h3>Indian Spices</h3>
+                    <p>Aromatic ingredients used to enhance the flavor, color, and aroma of food — essential in every
+                        Indian kitchen.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c3.png" alt="Category 3">
+                <div class="content-box">
+                    <h3>Fast Food</h3>
+                    <p>Quick and tasty meals like burgers, fries, and snacks — perfect for cravings or on-the-go
+                        munching.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c4.png" alt="Category 4">
+                <div class="content-box">
+                    <h3>Oils</h3>
+                    <p>Edible oils like mustard, sunflower, and olive, used for cooking, frying, and health-focused food
+                        preparation.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c5.png" alt="Category 5">
+                <div class="content-box">
+                    <h3>Sweets</h3>
+                    <p>Traditional and modern desserts made with love — from laddoos to chocolates, perfect for every
+                        celebration.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c6.png" alt="Category 1">
+                <div class="content-box">
+                    <h3>Juices</h3>
+                    <p>Refreshing drinks made from fruits and vegetables — rich in vitamins and great for hydration.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c7.png" alt="Category 2">
+                <div class="content-box">
+                    <h3>Home Cleaning Products</h3>
+                    <p>Home Cleaning Products</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="category">
+                <img src="c8.png" alt="Category 3">
+                <div class="content-box">
+                    <h3>Skin Care</h3>
+                    <p>Products designed to nourish, protect, and enhance your skin — from moisturizers to herbal face
+                        packs.</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="auto-scroll-slider">
+        <h1>Brands & Collabration</h1>
+        <div class="line"></div>
+        <div class="scroll-track" id="scroll-track">
+            <div class="card"><img src="b1.png" alt=""></div>
+            <div class="card"><img src="b2.png" alt=""></div>
+            <div class="card"><img src="b3.png" alt=""></div>
+            <div class="card"><img src="b4.png" alt=""></div>
+            <div class="card"><img src="b5.png" alt=""></div>
+            <div class="card"><img src="b6.png" alt=""></div>
+            <div class="card"><img src="b7.png" alt=""></div>
+            <div class="card"><img src="b8.png" alt=""></div>
+            <div class="card"><img src="b9.png" alt=""></div>
+            <div class="card"><img src="b10.png" alt=""></div>
+            <div class="card"><img src="b1.png" alt=""></div>
+            <div class="card"><img src="b2.png" alt=""></div>
+            <div class="card"><img src="b3.png" alt=""></div>
+            <div class="card"><img src="b4.png" alt=""></div>
+            <div class="card"><img src="b5.png" alt=""></div>
+            <div class="card"><img src="b6.png" alt=""></div>
+            <div class="card"><img src="b7.png" alt=""></div>
+            <div class="card"><img src="b8.png" alt=""></div>
+            <div class="card"><img src="b9.png" alt=""></div>
+            <div class="card"><img src="b10.png" alt=""></div>
+        </div>
+        <div class="scroll-track2" id="scroll-track">
+            <div class="card"><img src="b10.png" alt=""></div>
+            <div class="card"><img src="b12.png" alt=""></div>
+            <div class="card"><img src="b13.png" alt=""></div>
+            <div class="card"><img src="b14.png" alt=""></div>
+            <div class="card"><img src="b15.png" alt=""></div>
+            <div class="card"><img src="b16.png" alt=""></div>
+            <div class="card"><img src="b17.png" alt=""></div>
+            <div class="card"><img src="b18.png" alt=""></div>
+            <div class="card"><img src="b19.png" alt=""></div>
+            <div class="card"><img src="b20.png" alt=""></div>
+            <div class="card"><img src="b10.png" alt=""></div>
+            <div class="card"><img src="b12.png" alt=""></div>
+            <div class="card"><img src="b13.png" alt=""></div>
+            <div class="card"><img src="b14.png" alt=""></div>
+            <div class="card"><img src="b15.png" alt=""></div>
+            <div class="card"><img src="b16.png" alt=""></div>
+            <div class="card"><img src="b17.png" alt=""></div>
+            <div class="card"><img src="b18.png" alt=""></div>
+            <div class="card"><img src="b19.png" alt=""></div>
+            <div class="card"><img src="b20.png" alt=""></div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>We offer top-notch products and exceptional customer service. Explore your favorite categories with
+                    ease!</p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@example.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: Mumbai, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menu = document.querySelector(".menu");
+            const nav = document.querySelector("nav");
+
+            if (menu) {
+                menu.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+            }
+
+            window.addEventListener("scroll", () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                document.getElementById('progressBar').style.width = scrollPercent + '%';
+            });
+
+            // Enhanced search functionality
+            const searchBar = document.getElementById("searchBar");
+            const searchBtn = document.querySelector(".search .btn");
+            
+            if (searchBar && searchBtn) {
+                searchBtn.addEventListener("click", filterCards);
+                searchBar.addEventListener("keyup", function(event) {
+                    if (event.key === "Enter") {
+                        filterCards();
+                    }
+                });
+            }
+        });
+
+        function filterCards() {
+            const input = document.getElementById("searchBar").value.toLowerCase().trim();
+            const allCards = document.querySelectorAll(".product-card");
+            const searchResultSection = document.querySelector(".search-result");
+            let hasMatches = false;
+
+            allCards.forEach(card => {
+                const keywords = card.getAttribute("data-keywords") ? card.getAttribute("data-keywords").toLowerCase() : "";
+                const productName = card.querySelector(".product-name") ? card.querySelector(".product-name").textContent.toLowerCase() : "";
+                const productDesc = card.querySelector(".description") ? card.querySelector(".description").textContent.toLowerCase() : "";
+                
+                if (keywords.includes(input) || productName.includes(input) || productDesc.includes(input)) {
+                    card.style.display = "block";
+                    hasMatches = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Show/hide search results section based on input
+            if (searchResultSection) {
+                if (input.length > 0) {
+                    searchResultSection.style.display = "block";
+                    if (!hasMatches) {
+                        searchResultSection.innerHTML = '<p class="no-results">No products found matching your search.</p>';
+                    }
+                } else {
+                    searchResultSection.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
